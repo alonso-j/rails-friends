@@ -1,0 +1,20 @@
+<h1>About Us...</h1>
+
+<%# Global variables %>
+<span><%= @about_me %></span>
+<br/>
+<span>2 + 2 = <%= @answer %></span>
+
+<br/>
+<%# Local variables %>
+<span>
+  <% answer = 4 + 2 %>
+  4 + 2 = <%= answer %>
+</span>
+
+<br/>
+<%# Changing global variables %>
+<span>
+  <% @answer = 4 + 2 %>
+  4 + 2 = <%= @answer %>
+</span>

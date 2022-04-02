@@ -1,0 +1,18 @@
+<h1>All Friends</h1>
+
+<table id="friends" class="table table-hover">
+  <thead class="table-dark">
+    <tr>
+      <th>Name:</th>
+      <th>Email:</th>
+      <th>Phone:</th>
+      <th>Twitter:</th>
+      <th></th>
+    </tr>
+  </thead>
+  <% @friends.each do |friend| %>
+    <%= render friend %>
+  <% end %>
+</table>
+
+<%= link_to "ADD", new_friend_path, class:"btn btn-secondary" %>

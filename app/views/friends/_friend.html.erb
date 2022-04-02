@@ -1,0 +1,24 @@
+<% if friend.user == current_user %>
+  <tbody id="<%= dom_id friend %>">
+    <tr>
+        <td>
+          <%= link_to friend.first_name + " " + friend.last_name, 
+              friend, 
+              class: "text-decoration-none text-capitalized text-reset" 
+          %>
+        </td>
+        <td>
+          <%= friend.email %>
+        </td>
+        <td>
+          <%= friend.phone %>
+        </td>
+        <td>
+          <%= friend.twitter %>
+        </td>
+        <td>
+          <%= button_to "REMOVE", friend, method: :delete, class:"btn btn-outline-danger btn-sm" %>
+        </td>
+    </tr>
+  </tbody>
+<% end %>
